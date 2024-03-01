@@ -1,0 +1,12 @@
+@use '../custom' as *;
+@use '../base/mixins' as m;
+
+.header{
+    @include m.background-image('../img/header.jpg')
+}
+
+.navegacion a{
+    &:hover{
+        background-color: $primary;
+    }
+}
