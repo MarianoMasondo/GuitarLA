@@ -11843,12 +11843,45 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@keyframes animarImagen {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .header {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header.jpg");
   background-position: 50%;
   background-size: cover;
+  position: relative;
+}
+.header .header-guitarra {
+  display: none;
+}
+@media (min-width: 992px) {
+  .header .header-guitarra {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-name: animarImagen;
+  }
 }
 
+.navegacion {
+  position: relative;
+  z-index: 1;
+}
 .navegacion a:hover {
   background-color: #e99401;
 }
